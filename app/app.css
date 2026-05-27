@@ -7,9 +7,19 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  /* Match the app's cream background so the area outside the content on wide
+     screens doesn't flash white */
+  background-color: #efede4;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
+}
+
+/* Hide scrollbar while keeping scroll functionality */
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
